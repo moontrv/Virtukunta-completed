@@ -1,0 +1,213 @@
+/* styling for the Opettajalle pages */
+
+.thirdnav-p-wrapper{
+
+}
+
+
+.nav-2-content {
+	line-height: 1.3em;
+	font-family: Arial, Sans-Serif;
+	font-size: 13px;
+	color: #576170;
+	//background-color: white;
+	//padding: 15px 0px 50px 0px;
+}
+
+.nav-2-left h4 {
+	
+	display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	
+	margin-left: 10%;
+	margin-right: 5%;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: italic;
+	color: black;
+}
+
+
+
+#secondnavnav{
+	margin-left:auto;
+	margin-right:auto;
+	
+	display:none;
+	background-color: #840bd1;
+	width:calc(68% + 20px);
+	//height:4.1rem;
+	text-align: center;
+}
+
+#secondnavnav #nav2-s {
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+	display: block;
+}
+
+#secondnavnav ul{
+	list-style-type: none;
+    overflow: hidden;
+}
+
+#secondnavnav ul li{
+	float: left;
+	margin: auto;
+	padding: auto;
+	width: 50%;
+}
+
+#secondnavnav a{
+	color:white;
+	margin: auto;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, Sans-Serif;
+}
+
+#secondnavnav .nav2-s-i{
+	display: none;
+}
+
+.nav-2-left, .nav-2-right{
+	margin-top: 2rem;
+	
+}
+
+.nav-2-left{
+	padding-top: 2rem;
+	
+	padding-bottom: 5rem;
+	
+	background-color: white;
+}
+
+.nav-2-left h1,h2,h3{
+	margin-left: 2%;
+	margin-right: 2%;
+	//color: #0072bc;
+	
+	line-height: 1.3em;
+    font-family: Arial, Sans-Serif;
+	
+	color: #0093CA;
+}
+
+.nav-2-left h1{
+	font-family: Helvetica, Arial, Sans-serif;
+	font-weight: lighter;
+	font-size: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 20px;
+	
+	color: #0072bc;
+
+}
+
+.nav-2-left h3{
+	//font-size: 1.17em;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+	margin-left: 2%;
+	
+	color: #0093CA;
+	font-size: 1.4em;
+	
+}
+
+.nav-2-left h2{
+	font-size: 150%;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;
+	margin-left: 2%;
+	color: #CA0078;
+}
+
+.nav-2-left p{
+	margin-left: 10%;
+	//line-height: 1.3em;
+    //font-family: Arial, Sans-Serif;
+    //font-size: 13px;
+    //color: #000;
+	
+	margin-right: 5%;
+}
+
+.nav-2-left ul{
+	margin-left: 10%;
+	
+	margin-right: 5%;
+}
+
+.nav-2-left ul li{
+	margin-bottom: 2%;
+	
+	margin-left: 5%;
+}
+/*.nav-2-right h3{
+	font-size: 1.5rem;
+	font-weight: bold;
+}*/
+@media (min-width: 680px) {
+	.nav-2-left{
+		width:51.5%;
+		background:white;
+		display:inline-block;
+		text-align:left;
+	}
+	/*.nav-2-right{
+		width:16.5%;
+		background:white;
+		display:inline-block;
+		margin-left:2px;
+		padding:10px;
+		text-align:left;
+		vertical-align: top;
+	}*/
+
+	.second-nav-text {
+		text-align:center;
+		padding-bottom:10px;
+		min-height:50vh;
+	}
+
+	.nav-3-wrapper{
+		max-width:1386px;
+
+	}
+
+}
+
+@media (min-width: 1200px) {
+	#secondnavnav{
+		display:block;
+	}
+	#secondnavnav a{
+		display:inline-block;
+		//margin-top: 0.6rem;
+	}
+	.container {
+	    width: 100%;
+	}
+}
+
+/*.centered-text {
+	margin: auto;
+	width: 940px;
+}*/

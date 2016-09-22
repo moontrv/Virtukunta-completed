@@ -1,0 +1,28 @@
+name: viku
+type: theme
+description: 'This is the basic custom theme for virtuaalikunta.net'
+package: Core
+base theme: bootstrap
+
+libraries:
+  - viku/global-css
+  - viku/global-js
+
+# Information added by Drupal.org packaging script on 2016-06-01
+version: '8.1.2'
+core: '8.x'
+
+regions:
+  top_language_menu: "Top Language Menu"
+  navmenu: "Navmenu"
+  navigation: "Navigation"
+  navigation_collapsible: "Navigation (Collapsible)"
+  tabs_menu: "Tabs Menu"
+  secondary_menu: "Secondary Menu"
+  help: "Help"
+  content_top: "Content Top"
+  content_left: "Content Left"
+  content_right: "Content Right"
+  footer_top: "Footer Top"
+  footer_middle: "Footer Middle"
+  footer_bottom: "Footer Bottom"

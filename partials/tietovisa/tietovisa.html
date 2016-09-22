@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="tietovisa.js"></script>
+<link href="tietovisa.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div id="kuntavisa-game-div">
+
+    <div id="divStartPage">
+        <div id="kuntavisa-game-start">
+            <div class="kuntavisa-welcome">TERVETULOA PELAAMAAN!</div>
+            <input type="text" id="txtNick" value="Anna nimimerkki" class="kuntavisa-nick" onFocus="clearText(this)" maxlength="15"></input>
+            <div id="kuntavisa-dropdown-boxer">
+                    <div id="muni-dl"></div>
+            </div>
+            <input type="image" src="tietovisa_start.png" alt="Aloita peli" id="StartButton" onclick="return startGameDelay();" />
+        </div>
+    </div>
+
+    <div id="divGamePage">
+        <div id="kuntavisa-game-payload">
+            <div class="tietovisa-progress">
+            </div>
+            <div class="tietovisa-score">
+                Score: <span style="color: #c00;" id="litScore">0</span>
+            </div>
+            <br style='clear: both' />
+            </p>
+            <p>
+            </p>
+            <div id="upper-part-restrict-change">
+                <div class="kuntavisa-question">
+                    <label id="lblQuestion">Question</label>
+                </div>
+                <div class="kuntavisa-answer-choices">
+                    <div class="kuntavisa-questionbutton-div">
+                        <a href="#" id="btnChoice1Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(1);"></a>&nbsp;
+                    </div>
+
+                    <div class="kuntavisa-questionbutton-div">
+                        <a href="#" id="btnChoice2Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(2);"></a>&nbsp;
+                    </div>
+
+                    <div class="kuntavisa-questionbutton-div">
+                        <a href="#" id="btnChoice3Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(3);"></a>&nbsp;
+                    </div>
+
+                    <div class="kuntavisa-questionbutton-div">
+                        <a href="#" id="btnChoice4Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(4);"></a>&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div id="kuntavisa-time-elapsed">
+                <div class="time-header">Aika:</div>
+                <div id="time-gauge">
+                    <div id="time-gauge-elapsed"></div>
+                </div>
+                <div id="time-text">Aika: <span class="time-text-secs">0</span> s</div>
+                <br style='clear: both' />
+            </div>
+            <div class="kuntavisa-actions">
+                <div class="kuntavisa-left-buttons-1">
+                    <input type="image" id="btnPass" src="tietovisa_skip_button.png" onclick="return Skipify()" />&nbsp;
+                </div>
+                <div class="kuntavisa-left-buttons-2">
+                    &nbsp;<input type="image" id="btnEasier" src="tietovisa_easify_button.png" onclick="return Easify()" />
+                </div>
+                <div class="kuntavisa-right-button">
+                    <input type="image" id="btnInterrupt" src="tietovisa_quit_button.png" onclick="return Quitify()" />
+                </div>
+                <br style='clear: both' />
+            </div>
+        </div>
+    </div>
+
+
+    <div id="divReadyPage">
+        <div id="lblMsg"></div>
+        <div id="lblScoring">Sait <span id="gotScore"></span> pistett&auml;</div>
+        <br style='clear: both' />
+        <div id="divScore"></div>
+        <div id="lblResults"></div>
+        <div id="divNewGame"><span class="div-button-bg"><a href="" id="HrefRestart">Uusi peli</a></span></div>
+    </div>
+    <div id="highScorePage">
+        <div id="highscore-top-line">
+            <div class="highscore-header">Tulokset:</div>
+            <div id="dd-time">
+                <ul class="dd-hiscore">
+                    <li>Ajanjakso<ul>
+                        <li><a href="" onClick="return Weekly()">Viikko</a></li>
+                        <li><a href="" onClick="return Monthly()">Kuukausi</a></li>
+                        <li><a href="" onClick="return Yearly()">Vuosi</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="highscore-munis">
+                <ul class="dd-hiscore">
+                    <li>Kunta<ul>
+                        <li><a href="" onClick="return OwnMuni();">Oma kunta</a></li>
+                        <li><a href="" onClick="return AllMunies();">Kaikki kunnat</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br style='clear: both' />
+        <div id="highscore-titles"><table><tr><td class="hi-pos">Sija</td><td class="hi-name">Nimi</td><td class="hi-score">Pisteet</td><td class="hi-time">Aika</td><td class="hi-date">Päivämäärä</td><td class="hi-muni">Kunta</td></tr></table></div>
+            <div id="highscore-scroll">
+                <div id="scroll-divx" class="scrollable"></div>
+            </div>
+
+        <div id="divHighNewGame"><span class="div-button-bg"><a href="" id="HrefRestartHi">Uusi peli</a></span></div>
+    </div>
+    <div id="highScoreButton">
+        <input type="image" id="btnHighscore" src="tietovisa_highscore_btn.png" onclick="return HighScores()" />
+    </div>
+</div>
+</body>
+</html>

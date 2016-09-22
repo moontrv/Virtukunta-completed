@@ -1,0 +1,20 @@
+global-css:
+  version: VERSION
+  css:
+    base:
+      css/style.css: {}
+      css/header.css: {}
+      css/footer.css: {}
+      css/pelitstyle.css: {}
+      css/grid.css: {}
+      css/thirdnav.css: {}
+      css/secondnav.css: {}
+      css/tietovisa.css: {}
+
+global-js:
+  js:
+    js/main.js: {}
+    js/top5.js: {}
+    js/tietovisa.js: {}
+  dependencies:
+    - core/jquery

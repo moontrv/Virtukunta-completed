@@ -1,0 +1,869 @@
+@font-face
+{
+    font-family: GochiHand;
+    src: url('gochihand-regular.eot');
+    src: url('gochihand-regular.eot?#iefix') format('embedded-opentype'), url('gochihand-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: MyHelvetica;
+    src: url('helveticaltstd-roman.eot');
+    src: url('helveticaltstd-roman.eot?#iefix') format('embedded-opentype'), url('helveticaltstd-roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.kuntavisa-welcome
+{
+    font-family: GochiHand;
+    font-size: 30px;
+    color: #c700ba;
+}
+
+.kuntavisa-question
+{
+    font-family: GochiHand;
+    font-size: 20px;
+    color: #000;
+    width: 530px;
+}
+
+.kuntavisa-answer-choices
+{
+    height: 200px;
+}
+
+input.kuntavisa-answer-choices
+{
+    background-color: #00ff00;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+    font-family: MyHelvetica;
+}
+
+#kuntavisa-game-div
+{
+    margin: 10px 0px 10px 0px;
+    width: 940px;
+    height: 630px;
+    background-image: url('kuntavisa_background.png');
+    background-repeat: no-repeat;
+    padding-top: 85px;
+}
+
+#kuntavisa-game-payload
+{
+    margin-top: 10px;
+    padding-left: 62px;
+    height: 432px;
+}
+
+.kuntavisa-welcome
+{
+    background-image: url('tietovisa_welcome_bg.png');
+    height: 75px;
+    width: 405px;
+    margin: 0;
+    padding: 45px 0px 0px 230px;
+}
+
+.kuntavisa-nick
+{
+    background-image: url('tietovisa_intro_input_bg.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #fff;
+    font: normal 14px MyHelvetica,Helvetica,Arial,Sans-serif;
+    text-transform: uppercase;
+    border: none;
+    width: 250px;
+    height: 30px;
+    padding-left: 20px;
+    padding-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+
+#kuntavisa-game-start
+{
+    // background-image:url('kuntavisa_background.png');
+    background-image: url('tietovisa_arrows.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 640px;
+    height: 442px;
+}
+
+#kuntavisa-dropdown-boxer
+{
+    width: 630px;
+    text-align: center;
+    height: 90px;
+}
+
+
+.kuntavisa-around-ddl select
+{
+    background: transparent;
+    width: 288px;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 0;
+    height: 30px;
+    font: normal 14px MyHelvetica,Helvetica,Arial,Sans-serif;
+    text-transform: uppercase;
+    color: #ddd;
+}
+
+.kuntavisa-questionbutton-div
+{
+    height: 50px;
+}
+
+.kuntavisa-around-ddl
+{
+    background-image: url('tietovisa_intro_select_bg.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: #fff;
+    width: 255px;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 2px;
+    overflow: hidden;
+    text-aling: center;
+    margin: 0 auto 0 auto;
+}
+
+a.kuntavisa-questionbutton
+{
+    width: 400px;
+    height: 30px;
+    display: block;
+    font-weight: bold;
+    padding: 5px 0 3px 10px;
+    font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    background-image: url('choice-unselected.png');
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+
+    a.kuntavisa-questionbutton:link, a.kuntavisa-questionbutton:visited
+    {
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+    }
+
+    a.kuntavisa-questionbutton:hover, a.kuntavisa-questionbutton:active
+    {
+        background-image: url('choice-selected.png');
+        background-repeat: no-repeat;
+        color: #000;
+        text-decoration: none;
+    }
+
+.kuntavisa-answer-choices
+{
+    margin-top: 20px;
+}
+
+.kuntavisa-actions
+{
+    width: 570px;
+}
+
+.kuntavisa-left-buttons-1
+{
+    float: left;
+    width: 160px;
+    text-align: left;
+}
+
+.kuntavisa-left-buttons-2
+{
+    float: left;
+    width: 160px;
+    text-align: right;
+}
+
+
+.kuntavisa-right-button
+{
+    width: 235px;
+    float: left;
+    text-align: right;
+}
+
+.tietovisa-progress
+{
+    float: left;
+    width: 350px;
+}
+
+.tietovisa-score
+{
+    float: left;
+    width: 180px;
+    height: 30px;
+    text-align: right;
+    font-family: GochiHand;
+    font-size: 20px;
+    color: #000;
+}
+
+#divReadyPage
+{
+    padding-top: 20px;
+    padding-left: 30px;
+    height: 423px;
+}
+
+#lblMsg
+{
+    float: left;
+    font-family: GochiHand;
+    font-size: 20px;
+    width: 380px;
+}
+
+#lblScoring
+{
+    float: left;
+    font-family: GochiHand;
+    font-size: 20px;
+}
+
+#gotScore
+{
+    color: #c700ba;
+}
+
+#divNewGame
+{
+    margin-top: 150px;
+    width: 490px;
+    text-align: center;
+}
+
+#divHighNewGame
+{
+    margin-top: 30px;
+    width: 640px;
+    text-align: center;
+}
+
+.div-button-bg
+{
+    display: inline-block;
+    width: 155px;
+    height: 28px;
+    background-image: url('kuntavisa_gray_button.png');
+    background-repeat: no-repeat;
+    padding-top: 3px;
+}
+
+#divNewGame A:link, #divNewGame A:visited, #divHighNewGame A:link, #divHighNewGame A:visited
+{
+    text-align: center;
+    color: #fff;
+    text-decoration: none !important;
+    font-family: GochiHand !important;
+    font-size: 20px !important;
+}
+
+#divScore
+{
+    width: 540px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+    #divScore h3
+    {
+        font-size: 24px;
+        font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+        font-weight: bold;
+    }
+
+#results-table
+{
+    width: 280px;
+    text-align: left;
+    margin: 20px auto 20px auto;
+}
+
+.row-underlined
+{
+    width: 280px;
+    border-bottom: 2px solid #eebc15;
+}
+
+.timespan-spec
+{
+    display: inline-block;
+    width: 180px;
+    font-size: 18px;
+    font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+    font-weight: light;
+}
+
+.position
+{
+    display: inline-block;
+    font-size: 12px;
+    width: 20px;
+    font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+}
+
+.position-value
+{
+    display: inline-block;
+    font-size: 20px;
+    font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+    color: #c700ba;
+    width: 80px;
+    text-align: right;
+}
+
+#kuntavisa-time-elapsed
+{
+    padding-bottom: 20px;
+}
+
+.time-header
+{
+    font-family: GochiHand;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+#time-gauge
+{
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 316px;
+    float: left;
+    background-color: #000;
+    height: 10px;
+}
+
+#time-gauge-elapsed
+{
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 0px;
+    background-color: #c700ba;
+    height: 10px;
+}
+
+#time-text
+{
+    width: 214px;
+    float: left;
+    text-align: right;
+    font-family: GochiHand;
+    color: #000;
+    font-size: 16px;
+}
+
+.time-text-secs
+{
+    color: #c700ba;
+    font-size: 24px;
+}
+
+#upper-part-restrict-change
+{
+    height: 280px;
+}
+
+#highScorePage
+{
+    height: 442px;
+}
+
+#highScoreButton
+{
+    margin-left: 482px;
+}
+
+#highscore-top-line
+{
+    margin-bottom: 0px;
+}
+
+.highscore-header
+{
+    margin-left: 63px;
+    margin-top: 15px;
+    float: left;
+    width: 175px;
+    font-size: 24px;
+    font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+    color: #2c2b2b;
+}
+
+#highscore-timespan
+{
+    float: left;
+    width: 180px;
+}
+
+#highscore-munis
+{
+    float: left;
+    width: 180px;
+    padding-top: 0;
+    vertical-align: top;
+    margin-left: 10px;
+    height: 50px;
+}
+
+#highscore-titles
+{
+    margin-left: 63px;
+    margin-top: 30px;
+    width: 550px;
+    background-color: transparent;
+    border-bottom: 3px solid #eebc15;
+}
+
+#highscore-scroll
+{
+    margin-left: 63px;
+    height: 255px;
+    width: 550px;
+    background-color: transparent;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+    #highscore-scroll table, #highscore-titles table
+    {
+        border-collapse: collapse;
+    }
+
+
+    #highscore-scroll td
+    {
+        height: 1.2em;
+        font-family: MyHelvetica, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        border-bottom: 1px solid #eebc15;
+    }
+
+.scrollable
+{
+    width:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+    height: 255px;
+}
+
+.center-it
+{
+    width: 255px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#select-muni-ddl
+{
+    margin-top:10px;
+    background-image: url("tietovisa_intro_select_bg.png");
+    background-repeat: no-repeat;
+    font: normal 14px MyHelvetica,Helvetica,Arial,Sans-serif;
+    text-transform: uppercase;
+    text-align:left;
+    color: #fff;
+    width: 275px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-top:6px;
+
+}
+
+#select-muni-ddl:hover div ul {
+    display: block;
+}
+
+.muni-drop
+{
+    background-color:#ccc;
+}
+
+#muni-selector
+{
+    overflow:auto;
+}
+
+.dd-munis
+{
+    position:relative;
+    padding: 3px;
+    padding-left: 1px;
+    padding-top:6px;
+    /* Styles */
+    cursor: pointer;
+    outline: none;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-color: transparent;
+    height:160px;
+    width:168px;
+    /* Font settings */
+    font: normal 14px MyHelvetica,Helvetica,Arial,Sans-serif;
+    text-transform: uppercase;
+    text-align:left;
+    list-style: none;
+    display: hidden;
+}
+
+        .dd-munis li 
+        {
+            padding-left: 0px;
+        }
+
+        .dd-munis li a
+        {
+            display: block;
+            padding-left: 0px;
+            text-align: left;
+            text-decoration: none !important;
+            color: #000 !important;
+        }
+
+.dd-munis {
+    background-color: #efefef;
+}
+
+#muni-dl
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-top: 0;
+    width: 268px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+#dd-time
+{
+    float: left;
+    margin-left: 10px;
+    padding-top: 0;
+    width: 160px;
+    height: 50px;
+}
+
+
+.dd-hiscore
+{
+    /* Size and position */
+    position: relative;
+    width: 140px;
+    padding: 3px;
+    padding-left: 12px;
+    /* Styles */
+    background-color: #eebc15;
+    border-radius: 10px;
+    border: 0px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    /* Font settings */
+    font-family: GochiHand;
+    font-size: 20px;
+    color: #fff;
+    list-style: none;
+    z-index: 100;
+}
+
+    .dd-hiscore li ul
+    { /* Size & position */
+        position: relative;
+        /* Styles */
+        background-color: #eebc15;
+        border-radius: inherit;
+        background-color: #eebc15;
+        font-weight: normal;
+        list-style: none;
+        color: #fff !important;
+        text-align: left;
+        padding-left: 0px !important;
+        /* Hide it first */
+        display: none;
+        z-index: 100;
+        /*    pointer-events: none; */
+    }
+
+        .dd-hiscore li ul li ul
+        {
+            position: absolute;
+        }
+
+
+        .dd-hiscore li ul li
+        {
+            padding-left: 0px;
+        }
+
+        .dd-hiscore li ul a
+        {
+            display: block;
+            padding-left: 10px;
+            text-decoration: none !important;
+            color: #fff !important;
+        }
+
+
+    .dd-hiscore li:hover ul
+    {
+        display: block;
+    }
+
+.hi-pos
+{
+    width: 35px;
+}
+
+.hi-name
+{
+    width: 125px;
+}
+
+.hi-score
+{
+    width: 35px;
+    text-align: right;
+}
+
+.hi-time
+{
+    width: 60px;
+    text-align: right;
+}
+
+.hi-date
+{
+    padding-left: 10px;
+    width: 85px;
+}
+
+.hi-muni
+{
+    width: 155px;
+}
+
+
+.clr
+{
+    clear: both;
+    height: 0;
+}
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	background: red;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: transparent;
+	position: relative;
+}
+
+.jspDrag
+{
+	background: transparent;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+
+
+.jspHorizontalBar,
+.jspVerticalBar,
+.jspTrack
+{
+	background-image: url('scroll_behind.png');
+	background-repeat:repeat-y;
+	width:25px;
+}
+
+.jspDrag
+{
+	background:  #c700ba;
+
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.jspTrack .jspActive,
+.jspTrack .jspHover,
+.jspDrag:hover
+{
+	background: #c700ba;
+}
+
+
+.jspArrow
+{
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.jspVerticalBar>.jspActive,
+.jspArrow:hover
+{
+}
+
+.jspVerticalBar>.jspDisabled,
+.jspVerticalBar>.jspDisabled:hover,
+.jspHorizontalBar>.jspDisabled,
+.jspHorizontalBar>.jspDisabled:hover
+{
+	background-color: transparent;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 55px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 15px;
+}
+
+.jspArrowUp
+{
+	background-position: 0 0;
+}
+
+.jspArrowDown
+{
+	background-position: -64px 0 !important; 
+}
+
+.jspArrowLeft
+{
+	background-position: -96px 0 !important;
+}
+
+.jspArrowRight
+{
+	background-position: -32px 0 !important;
+}

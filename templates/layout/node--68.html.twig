@@ -1,0 +1,194 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+<article{{ attributes }}>
+	<script>var fingame = true; </script>
+	<div class="pelitContainers">
+		<div id="sutivi" class="pmain" style="background-image: url('{{ file_url(node.field_backgroundpicture.entity.fileuri) }}');">
+				<div id="fourthnavnav"><div id="subnav4" class="subnavbar"></div></div>
+					<div id="kuntavisa-game-div">
+
+						<div id="divStartPage">
+							<div id="kuntavisa-game-start">
+								<div class="kuntavisa-welcome">TERVETULOA PELAAMAAN!</div>
+								<input type="text" id="txtNick" value="Anna nimimerkki" class="kuntavisa-nick" onFocus="clearText(this)" maxlength="15"></input>
+								<div id="kuntavisa-dropdown-boxer">
+										<div id="muni-dl"></div>
+								</div>
+								<input type="image" src="/themes/viku/images/tietovisa/tietovisa_start.png" alt="Aloita peli" id="StartButton" onclick="return startGameDelay();" />
+							</div>
+						</div>
+		
+						<div id="divGamePage">
+							<div id="kuntavisa-game-payload">
+								<div class="tietovisa-progress">
+								</div>
+								<div class="tietovisa-score">
+									Score: <span style="color: #c00;" id="litScore">0</span>
+								</div>
+								<br style='clear: both' />
+								</p>
+								<p>
+								</p>
+								<div id="upper-part-restrict-change">
+									<div class="kuntavisa-question">
+										<label id="lblQuestion">Question</label>
+									</div>
+									<div class="kuntavisa-answer-choices">
+										<div class="kuntavisa-questionbutton-div">
+											<a href="#" id="btnChoice1Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(1);"></a>&nbsp;
+										</div>
+
+										<div class="kuntavisa-questionbutton-div">
+											<a href="#" id="btnChoice2Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(2);"></a>&nbsp;
+										</div>
+
+										<div class="kuntavisa-questionbutton-div">
+											<a href="#" id="btnChoice3Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(3);"></a>&nbsp;
+										</div>
+
+										<div class="kuntavisa-questionbutton-div">
+											<a href="#" id="btnChoice4Form1" class="kuntavisa-questionbutton" onclick="return TryAnswer(4);"></a>&nbsp;
+										</div>
+									</div>
+								</div>
+								<div id="kuntavisa-time-elapsed">
+									<div class="time-header">Aika:</div>
+									<div id="time-gauge">
+										<div id="time-gauge-elapsed"></div>
+									</div>
+									<div id="time-text">Aika: <span class="time-text-secs">0</span> s</div>
+									<br style='clear: both' />
+								</div>
+								<div class="kuntavisa-actions">
+									<div class="kuntavisa-left-buttons-1">
+										<input type="image" id="btnPass" src="/themes/viku/images/tietovisa/tietovisa_skip_button.png" onclick="return Skipify()" />&nbsp;
+									</div>
+									<div class="kuntavisa-left-buttons-2">
+										&nbsp;<input type="image" id="btnEasier" src="/themes/viku/images/tietovisa/tietovisa_easify_button.png" onclick="return Easify()" />
+									</div>
+									<div class="kuntavisa-right-button">
+										<input type="image" id="btnInterrupt" src="/themes/viku/images/tietovisa/tietovisa_quit_button.png" onclick="return Quitify()" />
+									</div>
+									<br style='clear: both' />
+								</div>
+							</div>
+						</div>
+
+
+						<div id="divReadyPage">
+							<div id="lblMsg"></div>
+							<div id="lblScoring">Sait <span id="gotScore"></span> pistett&auml;</div>
+							<br style='clear: both' />
+							<div id="divScore"></div>
+							<div id="lblResults"></div>
+							<div id="divNewGame"><span class="div-button-bg"><a href="" id="HrefRestart">Uusi peli</a></span></div>
+						</div>
+
+						<div id="highScorePage">
+							<div id="highscore-top-line">
+								<div class="highscore-header">Tulokset:</div>
+								<div id="dd-time">
+									<ul class="dd-hiscore">
+										<li>Ajanjakso<ul>
+											<li><a href="" onClick="return Weekly()">Viikko</a></li>
+											<li><a href="" onClick="return Monthly()">Kuukausi</a></li>
+											<li><a href="" onClick="return Yearly()">Vuosi</a></li>
+										</ul>
+										</li>
+									</ul>
+								</div>
+								<div id="highscore-munis">
+									<ul class="dd-hiscore">
+										<li>Kunta<ul>
+											<li><a href="" onClick="return OwnMuni();">Oma kunta</a></li>
+											<li><a href="" onClick="return AllMunies();">Kaikki kunnat</a></li>
+										</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<br style='clear: both' />
+							<div id="highscore-titles"><table><tr><td class="hi-pos">Sija</td><td class="hi-name">Nimi</td><td class="hi-score">Pisteet</td><td class="hi-time">Aika</td><td class="hi-date">Päivämäärä</td><td class="hi-muni">Kunta</td></tr></table></div>
+								<div id="highscore-scroll">
+									<div id="scroll-divx" class="scrollable"></div>
+								</div>
+
+							<div id="divHighNewGame"><span class="div-button-bg"><a href="" id="HrefRestartHi">Uusi peli</a></span></div>
+						</div>
+						<div id="highScoreButton">
+							<input type="image" id="btnHighscore" src="/themes/viku/images/tietovisa/tietovisa_highscore_btn.png" onclick="return HighScores()" />
+							</div>
+						</div>
+					</div>
+				</div>
+</article>

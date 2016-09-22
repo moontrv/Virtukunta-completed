@@ -1,0 +1,42 @@
+
+	<div class = "grid-container">
+		<div class="main-navigation">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+				{% if language.name == "Finnish" %}
+					<div id="language-links">
+						<span class="current-language">suomeksi</span>
+						<a href="/sv/ingångssidan">på svenska</a>
+					</div>
+					<div class="navbar-header">
+				{% elseif language.name == "swedish" %}
+					<div id="language-links">
+						<a href="/fi/etusivu">suomeksi</a>
+						<span class="current-language">på svenska</span>
+					</div>
+					<div id="navbar-headersv" class="navbar-header">
+				{% endif %}
+					
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						
+						{% if language.name == "Finnish" %}
+						<div id="virtuaalikunta-logo-fi" class="grid-3"></div>
+						{{ page.secondary_menu }}
+						{% elseif language.name == "swedish" %}
+						<div id="virtuaalikunta-logo-sv" class="grid-3"></div>
+						{{ page.navigation }}
+						{% endif %}
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+

@@ -1,0 +1,301 @@
+/* static navbar */
+
+.main-header{
+	height: 105px;
+	/*width: 940px;*/
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#nav2-s li a{
+	width: 100%;
+}
+
+#nav3-s li a {
+	width: 100%;
+}
+
+#nav4-s li a {
+	width: 100%;
+}
+
+.subnavbar a{
+	text-align: center !important;
+}
+
+#nav2-s li a.activeSub { color: white; background-color: #9F1BF3; text-align: center;}
+#nav3-s li a.activeSub { color: white; background-color: #4444F4; text-align: center;}
+#nav4-s li a.activeSub { color: white; background-color: #DFA900; text-align: center;}
+
+#nav1 a.active { color: white; background-color: #C60048; padding-top: 4px;}
+#nav2 a.active { color: white; background-color: #c700ba;padding-top: 4px;}
+#nav3 a.active { color: white; background-color: #2E2EFC; padding-top: 4px;}
+#nav4 a.active { color: white; background-color: #F0BC15; padding-top: 4px;}
+
+#language-links{display: block;}
+#language-links span{
+	background-color: #8CCCF8;
+	color:white;
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+}
+#language-links a{
+	background-color: #e6e6e6;
+	color:#A0B2B8;
+	padding: 0.5rem;
+}
+@media (max-width: 320px){
+	.navbar-header{
+		background-size:75% !important;
+	}
+}
+@media (max-width: 680px){
+	nav.navbar.navbar-inverse{
+		box-shadow: 0 7px 7px -2px #ccc;
+	}
+}
+@media (max-width: 767px){
+	.navbar-header{
+		background: url('../images/logo.PNG') no-repeat;
+		background-position: 0.5rem;
+		padding-right:0.5rem;
+	}
+	
+	#navbar-headersv{
+		background: url('../images/virtuaalikunta_logo-sv.png') no-repeat;
+		background-position: 0.5rem;
+		padding-right:0.5rem;
+	}
+	
+	.navbar-header{margin-top: 1rem;}
+	.grid-container{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar-inverse{
+		background-color: white;
+		border-color: white;
+	}
+	.navbar-inverse .navbar-toggle .icon-bar {
+		background-color: black;
+	}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background-color: #101010;
+	}
+	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #C0C0C0;
+	}
+	.navbar-toggle{margin-top: 0;}
+	#nav2-s a, #nav3-s a,#nav4-s a{
+		color:white;
+	}
+	#fourth-part-footer{
+		margin-bottom:3rem;
+	}
+}
+@media (min-width: 768px){
+
+	/* for the arrow-down in navbar */
+	#nav1 a.active, #nav2 a.active, #nav3 a.active, #nav4 a.active {height: 30px;}
+	#nav1 a.active:after, #nav2 a.active:after, #nav3 a.active:after, #nav4 a.active:after{
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	#nav1 a.active:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: #C60048;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	#nav2 a.active:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: #c700ba;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	#nav3 a.active:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: #2E2EFC;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	#nav4 a.active:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: #F0BC15;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+
+.main-navigation {
+	
+	list-style: none;
+	float : left;
+	max-height: 105px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	width:100%;
+}
+/*Override navbar-inverse bootstrap class*/
+.main-navigation >nav{
+		background-color: white;
+		border-color: white;
+}
+#virtuaalikunta-logo-fi{
+    float: left;
+    background: url('../images/logo.PNG');
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 50px;
+    height: 30px;
+    width: 270px;
+}
+
+#virtuaalikunta-logo-sv{
+    float: left;
+    background: url('../images/virtuaalikunta_logo-sv.png');
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    margin-top: 60px;
+    height: 30px;
+    width: 270px;
+}
+
+.main-navigation ul{margin-top:35px; float:left;}
+
+#language-links{float: right;margin-right:50px;}
+
+.main-navigation li {
+  display: block;
+  position: relative;
+  float: left;
+  z-index: 3;
+}
+.main-navigation li ul { background-color:white;display: none;z-index:4; }
+
+.main-navigation ul li a {
+  margin-top: 5px;
+  display: block;
+  padding: 1em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-style: Helvetica;
+}
+
+.main-navigation ul li ul{
+  margin-top: 0px;
+}
+#myNavbar{
+}
+#myNavbar ul li ul li{width: 100%;}
+#myNavbar ul li ul li:hover { background: #D9D9D9;}
+
+.main-navigation ul li ul a{color:black !important;}
+/* underline styling of nav categories*/
+#myNavbar>ul >li >a:hover{
+	text-decoration: underline;
+}
+
+/* Display the dropdown */
+
+.main-navigation li:hover > ul {
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-color: #B7CCD2;
+  border-width: 0.5px;
+}
+
+.main-navigation li:hover > ul li a {
+  text-align: left;
+}
+/*
+#nav1, #nav2, #nav3, #nav4, #nav2-s, #nav3-s, #nav4-s{
+	list-style-type: none;
+}*/
+#nav1 a{
+	color: #C60048;
+	font-weight: bold;
+	padding-top: 4px;
+}
+#nav2 a{
+	color: #c700ba;
+	font-weight: bold;
+	padding-top: 4px;
+}
+#nav3 a{
+	color: #2E2EFC;
+	font-weight: bold;
+	padding-top: 4px;
+}
+#nav4 a{
+	color: #F0BC15;
+	font-weight: bold;
+	padding-top: 4px;
+}
+
+/* second nav style*/
+.nav2-s-i{
+	float:left;
+	height: 10px;
+	width: 12px;
+	background-color: #c700ba;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: -12px;
+}
+
+/* third nav style*/
+.nav3-s-i{
+	float:left;
+	height: 10px;
+	width: 12px;
+	background-color: #2E2EFC;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: -12px;
+}
+
+/* fourth nav style*/
+.nav4-s-i{
+	float:left;
+	height: 10px;
+	width: 12px;
+	background-color: #F0BC15;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: -12px;
+}
+}
+@media (min-width: 768px) and (max-width: 808px){
+	#virtuaalikunta-logo-sv{
+		margin-top: 0;
+	}
+}
+@media (min-width: 768px) and (max-width: 812px){
+	#virtuaalikunta-logo-fi{
+		margin-top: 0;
+	}
+	ul.nav.navbar-nav{
+		margin-top: 2rem;
+	}
+}
+
+@media (min-width: 1010px){
+	.main-navigation ul{margin-top: 55px;}
+	.main-navigation{margin-left:20px;}
+}
+	
